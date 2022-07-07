@@ -1,0 +1,53 @@
+<script>
+var arr = new Float32Array(1 << 18);
+for(var i = 0; i < 1 << 18; i++) {
+  arr[i] = Math.random();
+}
+
+var numberOfRuns = 100;
+
+function time(name, f){
+    var start = performance.now();
+    console.log(f());
+    return performance.now() - start;
+}
+
+function runTest(name, f){
+    var totalTime = 0;
+    for(var r = 0; r < numberOfRuns; r++)
+        totalTime += time(name,f);
+    return totalTime / numberOfRuns;
+}
+var forTime = runTest('for', function(){
+    let mean = 0;
+    for(var j = 0; j < arr.length; j++)
+        mean += arr[j];
+    return mean / arr.length;
+});
+var forInTime = runTest('forIn', function(){
+    var mean = 0;
+    for (let idx in arr) {
+        mean += arr[idx];
+    };
+    return mean / arr.length;
+});
+var forOfTime = runTest('forOf', function(){
+    var mean = 0;
+    for (let element of arr) {
+        mean += element;
+    };
+    return mean / arr.length;
+});
+var forEachTime = runTest('forEach', function(){
+    var mean = 0;
+    arr.forEach(function(v){
+        mean += v;
+    });
+    return mean / arr.length;
+});
+
+console.log(`for ${forTime}ms`);
+console.log(`forIn ${forInTime}ms`);
+console.log(`forOf ${forOfTime}ms`);
+console.log(`forEach ${forEachTime}ms`);
+</script>
