@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  Web Audio 2.0, what's new?
+</title>
+<meta charset="utf-8">
+<style>
+
+code.remark-inline-code {
+  font-family: courier;
+}
+
+pre code.remark-code {
+  font-family: courier;
+}
+
+body {
+  font-family: "Helvetica Neue", "Nimbus Sans L", sans-serif;
+}
+
+table {
+  font-size: var(--small);
+  margin: 0 auto var(--first);
+  border-collapse: collapse;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  caption-side: bottom;
+}
+
+thead { 
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+tr td:first-child {
+  padding-left:0px;
+}
+
+td {
+  padding:5px 0px 3px 80px;
+}
+
+blockquote {
+  border-left: 0.2em solid black;
+  padding-left: 0.5em;
+}
+
+blink {
+    -webkit-animation: 1s linear infinite condemned_blink_effect; // for android
+    animation: 1s linear infinite condemned_blink_effect;
+}
+@-webkit-keyframes condemned_blink_effect { // for android
+    0% {
+            visibility: hidden;
+        }
+    50% {
+            visibility: hidden;
+        }
+    100% {
+            visibility: visible;
+        }
+}
+@keyframes condemned_blink_effect {
+    0% {
+            visibility: hidden;
+        }
+    50% {
+            visibility: hidden;
+        }
+    100% {
+            visibility: visible;
+        }
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Fira Code';
+}
+
+a, a:visited {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dashed black;
+  font-family: "Fira Code";
+}
+
+dt {
+  font-weight: 700;
+  line-height: 2em;
+}
+
+dd {
+  border-left: 5px solid black;
+  padding-left: 10px;
+}
+
+.bigger {
+  font-size: 1.5em;
+}
+
+.big {
+  font-size: 2em;
+}
+
+</style>
+</head>
+<body>
+<textarea id="source">
+
+  class: center, middle
+
+  # Web Audio 2.0, what's new ?
+
+  What's new is that there is no 2.0
+
+  W3C Audio Working Group
+
+  7<sup>th</sup> Web Audio Conference 2022, Cannes, France
+
+  ---
+
+  ---
+
+  class: small
+
+  # Thanks !
+
+  <dl>
+    <dt>
+      Slides
+    </dt>
+    <dd>
+      <a
+        href="https://padenot.github.io/wac-22/audiowg">https://padenot.github.io/wac-22/audiowg</a><br>
+    </dd>
+    <dt>Email</dt>
+    <dd><a href="mailto:padenot@mozilla.com"><code>padenot@mozilla.com</code></a>, will relay to the group</dd>
+    <dt>GitHub, where most things are happening</dt>
+    <dd><a href="https://github.com/WebAudio/">https://github.com/WebAudio/</a>
+  </dl>
+
+</textarea>
+<script src="remark-latest.min.js">
+</script>
+<script>
+var slideshow = remark.create();
+</script>
+</body>
+<style>
+.remark-slide-content {
+    font-size: 28px;
+}
+.small {
+    font-size: 24px;
+}
+
+.smaller h2 {
+    font-size: 36px;
+}
+</style>
+</html>
